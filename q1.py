@@ -58,7 +58,7 @@ def check_server_event(log: Iterator[LogRecord]):
         events_dict[ev.ip_addr].append(ev)
 
     for ip_addr, events in events_dict.items():
-        print(f'--- {ip_addr} ---')
+        print(f'=== {ip_addr} ===')
         for ev in events:
             start_time_str = str(ev.start_time)
             if ev.end_time is None:

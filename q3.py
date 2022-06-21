@@ -85,8 +85,6 @@ def check_server_event(log: Iterator[LogRecord], to_tol: int, ol_tol: int, ol_st
     for ev in [*overload_events, *overloadings.values()]:
         overload_event_dict[ev.ip_addr].append(ev)
 
-    print(overload_events, overloadings)
-
     ip_addrs = set([*failer_event_dict.keys(), *overload_event_dict.keys()])
 
     for ip_addr in ip_addrs:
